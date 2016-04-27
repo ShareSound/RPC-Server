@@ -21,7 +21,6 @@ func initDatastore(){
 	var err error
 	defaultTokenSource, err = google.DefaultTokenSource(datastoreCtx,
 		datastore.ScopeDatastore,
-		datastore.ScopeUserEmail,
 	)
 	if err != nil || defaultTokenSource == nil{
 		log.Fatalf("Error getting google default token source")
